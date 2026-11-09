@@ -32,7 +32,8 @@ README_ROWS = 15          # rows per group shown in README.md; the full list liv
 MIN_USERS_30D = 1         # an actor nobody ran in 30 days is not worth recommending
 
 # Build fails if any of these reach a generated file.
-FORBIDDEN = ('dataimpulse', 'sk-or-v1-', 'CAP-', 'apify_api_')
+FORBIDDEN = ('dataimpulse', 'sk-or-v1-', 'apify_api_')
+CAPSOLVER_KEY = re.compile(r'CAP-[A-Za-z0-9]{20,}')
 # A price inside someone else's Store text goes stale, so it is cut with its "per 1,000 results" tail.
 PRICE_PHRASE = re.compile(r'(from |only |just |at )?\$\s?\.?\d[\d.,]*\s*[kKmM]?(\s*(/|per)\s*[\d.,]*\s*[kK]?(\s*\w+){1,2})?', re.IGNORECASE)
 
